@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -104,7 +105,7 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="751" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7xy-2w-N0N"/>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="C6E-d3-qMZ">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="234" id="dPp-tl-dnS"/>
+                                    <constraint firstAttribute="height" constant="1000" id="1sw-Ef-Asa"/>
                                 </constraints>
                             </mapView>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Wdf-ht-aj1"/>
@@ -162,18 +163,18 @@
                                 <exclude reference="FET-vE-Kvx"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="Nno-HG-aYR"/>
-                                <exclude reference="Xk4-PL-dOP"/>
                                 <exclude reference="Vfz-eG-D9S"/>
                                 <exclude reference="qFS-Lg-vIg"/>
                                 <exclude reference="wmg-Xt-PAi"/>
-                                <exclude reference="0UZ-6T-ZrJ"/>
-                                <exclude reference="bq5-MQ-RQF"/>
-                                <exclude reference="yeR-xb-Rob"/>
+                                <exclude reference="Nno-HG-aYR"/>
+                                <exclude reference="Xk4-PL-dOP"/>
                                 <exclude reference="8ft-jG-7rv"/>
                                 <exclude reference="N0P-68-AwB"/>
                                 <exclude reference="FRz-Ng-x8Z"/>
                                 <exclude reference="VNZ-Re-Tvp"/>
+                                <exclude reference="0UZ-6T-ZrJ"/>
+                                <exclude reference="bq5-MQ-RQF"/>
+                                <exclude reference="yeR-xb-Rob"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -183,14 +184,14 @@
                                 <include reference="FET-vE-Kvx"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Nno-HG-aYR"/>
-                                <exclude reference="QNC-8H-SPf"/>
-                                <include reference="Xk4-PL-dOP"/>
                                 <exclude reference="VGD-EV-Ty5"/>
                                 <include reference="Vfz-eG-D9S"/>
                                 <exclude reference="dH9-dj-a9R"/>
                                 <include reference="qFS-Lg-vIg"/>
                                 <include reference="wmg-Xt-PAi"/>
+                                <include reference="Nno-HG-aYR"/>
+                                <exclude reference="QNC-8H-SPf"/>
+                                <include reference="Xk4-PL-dOP"/>
                                 <include reference="8ft-jG-7rv"/>
                             </mask>
                         </variation>
@@ -200,12 +201,12 @@
                                 <include reference="Wdf-ht-aj1"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="0UZ-6T-ZrJ"/>
-                                <include reference="bq5-MQ-RQF"/>
-                                <include reference="yeR-xb-Rob"/>
                                 <include reference="N0P-68-AwB"/>
                                 <include reference="FRz-Ng-x8Z"/>
                                 <include reference="VNZ-Re-Tvp"/>
+                                <include reference="0UZ-6T-ZrJ"/>
+                                <include reference="bq5-MQ-RQF"/>
+                                <include reference="yeR-xb-Rob"/>
                             </mask>
                         </variation>
                     </view>
@@ -303,7 +304,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bOw-1Q-776" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2700" y="-287"/>
+            <point key="canvasLocation" x="2082" y="-412"/>
         </scene>
     </scenes>
 </document>
