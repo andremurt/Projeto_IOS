@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Connection.h"
+#import "EstabelecimentoViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<UITableViewDataSource>
 
+@property(nonatomic)NSArray<Estabelecimento *> *estabelecimentos;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 

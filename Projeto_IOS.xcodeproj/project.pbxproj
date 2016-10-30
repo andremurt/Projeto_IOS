@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0AA7151DC630990057AF29 /* Connection.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AA7141DC630990057AF29 /* Connection.m */; };
+		5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AA7171DC653460057AF29 /* Estabelecimento.m */; };
+		5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AA71A1DC671270057AF29 /* EstabelecimentoTableViewCell.m */; };
+		5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B0AA7211DC67B2E0057AF29 /* EstabelecimentoViewController.m */; };
 		5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C96F71DB9AEA800BC4A8A /* main.m */; };
 		5B8C96FB1DB9AEA800BC4A8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C96FA1DB9AEA800BC4A8A /* AppDelegate.m */; };
 		5B8C96FE1DB9AEA800BC4A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C96FD1DB9AEA800BC4A8A /* ViewController.m */; };
@@ -18,6 +22,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B0AA7131DC630990057AF29 /* Connection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Connection.h; path = class/Connection.h; sourceTree = "<group>"; };
+		5B0AA7141DC630990057AF29 /* Connection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Connection.m; path = class/Connection.m; sourceTree = "<group>"; };
+		5B0AA7161DC653460057AF29 /* Estabelecimento.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Estabelecimento.h; path = class/Estabelecimento.h; sourceTree = "<group>"; };
+		5B0AA7171DC653460057AF29 /* Estabelecimento.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Estabelecimento.m; path = class/Estabelecimento.m; sourceTree = "<group>"; };
+		5B0AA7191DC671270057AF29 /* EstabelecimentoTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstabelecimentoTableViewCell.h; path = class/EstabelecimentoTableViewCell.h; sourceTree = "<group>"; };
+		5B0AA71A1DC671270057AF29 /* EstabelecimentoTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EstabelecimentoTableViewCell.m; path = class/EstabelecimentoTableViewCell.m; sourceTree = "<group>"; };
+		5B0AA7201DC67B2E0057AF29 /* EstabelecimentoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EstabelecimentoViewController.h; path = class/EstabelecimentoViewController.h; sourceTree = "<group>"; };
+		5B0AA7211DC67B2E0057AF29 /* EstabelecimentoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EstabelecimentoViewController.m; path = class/EstabelecimentoViewController.m; sourceTree = "<group>"; };
 		5B8C96F31DB9AEA700BC4A8A /* Projeto_IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Projeto_IOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8C96F71DB9AEA800BC4A8A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5B8C96F91DB9AEA800BC4A8A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +56,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0AA71C1DC671770057AF29 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				5B0AA7191DC671270057AF29 /* EstabelecimentoTableViewCell.h */,
+				5B0AA71A1DC671270057AF29 /* EstabelecimentoTableViewCell.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		5B0AA71D1DC671870057AF29 /* storyboad */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C96FF1DB9AEA800BC4A8A /* Main.storyboard */,
+				5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */,
+			);
+			name = storyboad;
+			sourceTree = "<group>";
+		};
+		5B0AA71E1DC67AD20057AF29 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				5B8C96FC1DB9AEA800BC4A8A /* ViewController.h */,
+				5B8C96FD1DB9AEA800BC4A8A /* ViewController.m */,
+				5B0AA7201DC67B2E0057AF29 /* EstabelecimentoViewController.h */,
+				5B0AA7211DC67B2E0057AF29 /* EstabelecimentoViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		5B0AA71F1DC67AE20057AF29 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				5B0AA7131DC630990057AF29 /* Connection.h */,
+				5B0AA7141DC630990057AF29 /* Connection.m */,
+				5B0AA7161DC653460057AF29 /* Estabelecimento.h */,
+				5B0AA7171DC653460057AF29 /* Estabelecimento.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		5B8C96EA1DB9AEA700BC4A8A = {
 			isa = PBXGroup;
 			children = (
@@ -64,13 +116,13 @@
 		5B8C96F51DB9AEA700BC4A8A /* Projeto_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				5B0AA71F1DC67AE20057AF29 /* model */,
+				5B0AA71E1DC67AD20057AF29 /* controller */,
+				5B0AA71C1DC671770057AF29 /* view */,
 				5B8C96F91DB9AEA800BC4A8A /* AppDelegate.h */,
 				5B8C96FA1DB9AEA800BC4A8A /* AppDelegate.m */,
-				5B8C96FC1DB9AEA800BC4A8A /* ViewController.h */,
-				5B8C96FD1DB9AEA800BC4A8A /* ViewController.m */,
-				5B8C96FF1DB9AEA800BC4A8A /* Main.storyboard */,
+				5B0AA71D1DC671870057AF29 /* storyboad */,
 				5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */,
-				5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */,
 				5B8C970A1DB9AEA800BC4A8A /* Info.plist */,
 				5B8C97021DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld */,
 				5B8C96F61DB9AEA700BC4A8A /* Supporting Files */,
@@ -173,7 +225,11 @@
 				5B8C96FE1DB9AEA800BC4A8A /* ViewController.m in Sources */,
 				5B8C97041DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld in Sources */,
 				5B8C96FB1DB9AEA800BC4A8A /* AppDelegate.m in Sources */,
+				5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */,
 				5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */,
+				5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */,
+				5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */,
+				5B0AA7151DC630990057AF29 /* Connection.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +295,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -280,7 +336,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -328,6 +384,7 @@
 				5B8C970F1DB9AEA800BC4A8A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
