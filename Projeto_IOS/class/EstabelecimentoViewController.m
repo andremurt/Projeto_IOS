@@ -31,6 +31,8 @@
     
     [self.mapView setRegion:region];
     [self.mapView addAnnotation:annotation];
+    
+    [self.lblNome setText:[[self estabelecimento] nome_estab]];
 }
 
 - (void)didReceiveMemoryWarning {

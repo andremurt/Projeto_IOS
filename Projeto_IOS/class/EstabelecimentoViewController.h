@@ -11,6 +11,11 @@
 #import "Estabelecimento.h"
 
 @interface EstabelecimentoViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *lblNome;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (weak, nonatomic) IBOutlet UILabel *labelTiposPagamentos;
+@property (weak, nonatomic) IBOutlet UIImageView *imgEstabelecimento;
+@property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
+@property (weak, nonatomic) IBOutlet UILabel *lblFacebook;
 @property(weak, nonatomic)Estabelecimento* estabelecimento;
 @end
