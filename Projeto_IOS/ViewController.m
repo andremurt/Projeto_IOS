@@ -40,6 +40,7 @@
     EstabelecimentoTableViewCell* cell = (EstabelecimentoTableViewCell *) [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
     Estabelecimento* estabelecimento = [[self estabelecimentos] objectAtIndex:indexPath.row];
     [cell.labelNomeEstabelecimento setText:estabelecimento.nome_estab];
+    [cell.labelCulinaria setText:estabelecimento.culinaria];
     
     [ViewController loadFromURL:[NSURL URLWithString:estabelecimento.icone] callback:^(UIImage *image) {
         [cell.imgIcone setImage:image];

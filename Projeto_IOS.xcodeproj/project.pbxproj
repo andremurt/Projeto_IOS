@@ -19,6 +19,8 @@
 		5B8C97061DB9AEA800BC4A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */; };
 		5B8C97091DB9AEA800BC4A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */; };
 		5B8C97121DB9AF9900BC4A8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8C97111DB9AF9900BC4A8A /* MapKit.framework */; };
+		E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C61DCAAA5000271614 /* FavoritosViewController.m */; };
+		E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		5B8C97081DB9AEA800BC4A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B8C970A1DB9AEA800BC4A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B8C97111DB9AF9900BC4A8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E3B202C51DCAAA5000271614 /* FavoritosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosViewController.h; sourceTree = "<group>"; };
+		E3B202C61DCAAA5000271614 /* FavoritosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosViewController.m; sourceTree = "<group>"; };
+		E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewCell.h; sourceTree = "<group>"; };
+		E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +122,7 @@
 		5B8C96F51DB9AEA700BC4A8A /* Projeto_IOS */ = {
 			isa = PBXGroup;
 			children = (
+				E30F85E31DCAA20D00F4CC55 /* coredata */,
 				5B0AA71F1DC67AE20057AF29 /* model */,
 				5B0AA71E1DC67AD20057AF29 /* controller */,
 				5B0AA71C1DC671770057AF29 /* view */,
@@ -144,6 +151,17 @@
 				5B8C97111DB9AF9900BC4A8A /* MapKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E30F85E31DCAA20D00F4CC55 /* coredata */ = {
+			isa = PBXGroup;
+			children = (
+				E3B202C51DCAAA5000271614 /* FavoritosViewController.h */,
+				E3B202C61DCAAA5000271614 /* FavoritosViewController.m */,
+				E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */,
+				E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */,
+			);
+			name = coredata;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,10 +240,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */,
 				5B8C96FE1DB9AEA800BC4A8A /* ViewController.m in Sources */,
 				5B8C97041DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld in Sources */,
 				5B8C96FB1DB9AEA800BC4A8A /* AppDelegate.m in Sources */,
 				5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */,
+				E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */,
 				5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */,
 				5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */,
 				5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */,

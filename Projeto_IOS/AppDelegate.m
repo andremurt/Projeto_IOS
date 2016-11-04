@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "Estabelecimento.h"
 
 @interface AppDelegate ()
 
@@ -19,6 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
     return YES;
 }
 
@@ -55,6 +57,10 @@
 #pragma mark - Core Data stack
 
 @synthesize persistentContainer = _persistentContainer;
+@synthesize managedObjectContext = _managedObjectContext;
+@synthesize managedObjectModel = _managedObjectModel;
+@synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+
 
 - (NSPersistentContainer *)persistentContainer {
     // The persistent container for the application. This implementation creates and returns a container, having loaded the store for the application to it.

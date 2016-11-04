@@ -24,6 +24,7 @@
 @property (nonatomic) NSString* longitute;
 @property (nonatomic) NSString* foto;
 @property (nonatomic) NSString* icone;
+@property (nonatomic) NSString* culinaria;
 
 - (instancetype)initWithDicitionary:(NSDictionary *) estabelecimento;
 

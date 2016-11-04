@@ -33,6 +33,7 @@
     self.longitute          = [estabelecimento objectForKey:@"longitute"];
     self.foto               = [estabelecimento objectForKey:@"foto"];
     self.icone              = [estabelecimento objectForKey:@"icone"];
+    self.culinaria          = [estabelecimento objectForKey:@"culinaria"];
 }
 
 @end
