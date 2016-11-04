@@ -21,6 +21,7 @@
 		5B8C97121DB9AF9900BC4A8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8C97111DB9AF9900BC4A8A /* MapKit.framework */; };
 		E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C61DCAAA5000271614 /* FavoritosViewController.m */; };
 		E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */; };
+		E3C6BED41DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,8 @@
 		E3B202C61DCAAA5000271614 /* FavoritosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosViewController.m; sourceTree = "<group>"; };
 		E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewCell.h; sourceTree = "<group>"; };
 		E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosTableViewCell.m; sourceTree = "<group>"; };
+		E3C6BED21DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabEstabelecimento+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TabEstabelecimento+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,8 @@
 		E30F85E31DCAA20D00F4CC55 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				E3C6BED21DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.h */,
+				E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */,
 				E3B202C51DCAAA5000271614 /* FavoritosViewController.h */,
 				E3B202C61DCAAA5000271614 /* FavoritosViewController.m */,
 				E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */,
@@ -247,6 +252,7 @@
 				5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */,
 				E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */,
 				5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */,
+				E3C6BED41DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m in Sources */,
 				5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */,
 				5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */,
 				5B0AA7151DC630990057AF29 /* Connection.m in Sources */,

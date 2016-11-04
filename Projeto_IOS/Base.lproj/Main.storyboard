@@ -34,7 +34,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MIU-o3-aLh" id="Ge6-zv-CvH">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vgm-qf-gHM">
@@ -226,7 +226,7 @@
         <!--Favoritos-->
         <scene sceneID="UJs-KV-WMq">
             <objects>
-                <viewController title="Favoritos" id="HrY-JZ-rV3" sceneMemberID="viewController">
+                <viewController title="Favoritos" id="HrY-JZ-rV3" customClass="FavoritosViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w8B-w7-4jg"/>
                         <viewControllerLayoutGuide type="bottom" id="gE9-tj-vpn"/>
@@ -250,7 +250,7 @@
                                         <rect key="frame" x="0.0" y="28" width="343" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kTH-va-CF1" id="ewn-xA-u1i">
-                                            <rect key="frame" x="0.0" y="0.0" width="310" height="103"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="310" height="102"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-Gp-97J">
@@ -265,8 +265,8 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Comida" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNi-0A-aoa">
-                                                    <rect key="frame" x="89" y="48" width="59" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Culinaria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNi-0A-aoa">
+                                                    <rect key="frame" x="89" y="48" width="67" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -310,6 +310,6 @@
         <image name="icon_filter" width="22" height="22"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Imc-hk-uAo"/>
+        <segue reference="qYc-LF-xCQ"/>
     </inferredMetricsTieBreakers>
 </document>
