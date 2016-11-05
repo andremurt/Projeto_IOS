@@ -16,6 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *labelTiposPagamentos;
 @property (weak, nonatomic) IBOutlet UIImageView *imgEstabelecimento;
 @property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
-@property (weak, nonatomic) IBOutlet UILabel *lblFacebook;
+@property (weak, nonatomic) IBOutlet UILabel *lblhorario;
 @property(weak, nonatomic)Estabelecimento* estabelecimento;
 @end

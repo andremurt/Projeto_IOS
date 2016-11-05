@@ -33,6 +33,15 @@
     [self.mapView addAnnotation:annotation];
     
     [self.lblNome setText:[[self estabelecimento] nome_estab]];
+    [self.lblEndereco setText:[[self estabelecimento] endereco]];
+    [self.lblhorario setText:[[self estabelecimento] horario_func]];
+    [self.labelTiposPagamentos setText:[[self estabelecimento] tipos_pagamento]];
+        
+    self.imgEstabelecimento.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
+                                                            [NSURL URLWithString:self.estabelecimento.foto]]];
+
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {
