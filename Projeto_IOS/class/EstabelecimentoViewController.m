@@ -59,4 +59,17 @@
 }
 */
 
+- (IBAction)switchFavorito:(UISwitch *)sender {
+    
+    
+    if (sender.isOn){
+        //inserir
+        
+     }
+    else{
+        
+        //deletar
+    }
+    
+}
 @end
