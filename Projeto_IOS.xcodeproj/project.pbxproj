@@ -200,6 +200,7 @@
 				TargetAttributes = {
 					5B8C96F21DB9AEA700BC4A8A = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = AEYRW5LL6B;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -375,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AEYRW5LL6B;
 				INFOPLIST_FILE = Projeto_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Projeto-IOS";
@@ -386,6 +388,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = AEYRW5LL6B;
 				INFOPLIST_FILE = Projeto_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Projeto-IOS";

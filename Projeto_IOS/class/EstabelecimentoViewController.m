@@ -7,6 +7,9 @@
 //
 
 #import "EstabelecimentoViewController.h"
+#import "Estabelecimento.h"
+#import "AppDelegate.h"
+#import <CoreData/CoreData.h>
 
 @interface EstabelecimentoViewController ()
 
@@ -39,8 +42,6 @@
         
     self.imgEstabelecimento.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
-
-    
     
 }
 
@@ -64,7 +65,25 @@
     
     if (sender.isOn){
         //inserir
+        NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
         
+        NSManagedObject *nsmanaged = [NSEntityDescription insertNewObjectForEntityForName:@"TabEstabelecimento" inManagedObjectContext:context];
+        
+        
+        [nsmanaged setValue:self.estabelecimento.icone forKey:@"icone"];
+        [nsmanaged setValue:self.estabelecimento.culinaria forKey:@"culinaria"];
+        [nsmanaged setValue:self.estabelecimento.email forKey:@"email"];
+        [nsmanaged setValue:self.estabelecimento.endereco forKey:@"endereco"];
+        [nsmanaged setValue:self.estabelecimento.facebook forKey:@"facebook"];
+        [nsmanaged setValue:self.estabelecimento.foto  forKey:@"foto"];
+        [nsmanaged setValue:self.estabelecimento.horario_func forKey:@"horario_func"];
+        [nsmanaged setValue:self.estabelecimento.latitude forKey:@"latitude"];
+        [nsmanaged setValue:self.estabelecimento.longitute forKey:@"longitute"];
+        [nsmanaged setValue:self.estabelecimento.nome_estab forKey:@"nome_estab"];
+        [nsmanaged setValue:self.estabelecimento.telefone forKey:@"telefone"];
+        [nsmanaged setValue:self.estabelecimento.tipos_pagamento forKey:@"tipos_pagamento"];
+
+
      }
     else{
         

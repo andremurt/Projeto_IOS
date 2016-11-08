@@ -17,7 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imgEstabelecimento;
 @property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
 @property (weak, nonatomic) IBOutlet UILabel *lblhorario;
-@property(weak, nonatomic)Estabelecimento* estabelecimento;
+@property (strong, nonatomic)Estabelecimento* estabelecimento;
 
 - (IBAction)switchFavorito:(id)sender;
 
