@@ -70,6 +70,12 @@
         NSManagedObject *nsmanaged = [NSEntityDescription insertNewObjectForEntityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         
         
+        //[NSString stringWithFormat:@"%d",self.estabelecimento.id_estab];
+        
+        
+        [nsmanaged setValue: [NSString stringWithFormat:@"%d",self.estabelecimento.id_estab] forKey:@"id_estab"];
+        
+        
         [nsmanaged setValue:self.estabelecimento.icone forKey:@"icone"];
         [nsmanaged setValue:self.estabelecimento.culinaria forKey:@"culinaria"];
         [nsmanaged setValue:self.estabelecimento.email forKey:@"email"];
@@ -88,6 +94,8 @@
     else{
         
         //deletar
+        NSFetchRequest *requeste = [[NSFetchRequest alloc] initWithEntityName:@"id_estab"];
+        
     }
     
 }
