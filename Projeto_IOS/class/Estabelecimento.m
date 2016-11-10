@@ -21,7 +21,7 @@
 
 -(void)createEstabelecimento:(NSDictionary *) estabelecimento {
     
-    self.id_estab           = [[estabelecimento objectForKey:@"id_estab"] integerValue];
+    self.id_estab           = [estabelecimento objectForKey:@"id_estab"];
     self.nome_estab         = [estabelecimento objectForKey:@"nome_estab"];
     self.horario_func       = [estabelecimento objectForKey:@"horario_func"];
     self.telefone           = [estabelecimento objectForKey:@"telefone"];

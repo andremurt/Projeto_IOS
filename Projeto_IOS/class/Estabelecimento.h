@@ -12,7 +12,7 @@
 
 
 
-@property (nonatomic) NSInteger id_estab;
+@property (nonatomic) NSString* id_estab;
 @property (nonatomic) NSString* nome_estab;
 @property (nonatomic) NSString* horario_func;
 @property (nonatomic) NSString* telefone;
