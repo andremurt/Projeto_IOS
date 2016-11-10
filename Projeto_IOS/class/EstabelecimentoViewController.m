@@ -70,10 +70,10 @@
         NSManagedObject *nsmanaged = [NSEntityDescription insertNewObjectForEntityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         
         
-        //[NSString stringWithFormat:@"%d",self.estabelecimento.id_estab];
+        //[NSString stringWithFormat:@"%d",self.estabelecimento.id];
         
         
-        [nsmanaged setValue: [NSString stringWithFormat:@"%d",self.estabelecimento.id_estab] forKey:@"id_estab"];
+      //  [nsmanaged setValue: [NSString stringWithFormat:@"%d",self.estabelecimento.id_estab] forKey:@"id"];
         
         
         [nsmanaged setValue:self.estabelecimento.icone forKey:@"icone"];
@@ -94,7 +94,7 @@
     else{
         
         //deletar
-        NSFetchRequest *requeste = [[NSFetchRequest alloc] initWithEntityName:@"id_estab"];
+   //     NSFetchRequest *requeste = [[NSFetchRequest alloc] initWithEntityName:@"id_estab"];
         
     }
     

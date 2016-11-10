@@ -15,13 +15,12 @@
 		5B8C96FB1DB9AEA800BC4A8A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C96FA1DB9AEA800BC4A8A /* AppDelegate.m */; };
 		5B8C96FE1DB9AEA800BC4A8A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C96FD1DB9AEA800BC4A8A /* ViewController.m */; };
 		5B8C97011DB9AEA800BC4A8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C96FF1DB9AEA800BC4A8A /* Main.storyboard */; };
-		5B8C97041DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B8C97021DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld */; };
 		5B8C97061DB9AEA800BC4A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */; };
 		5B8C97091DB9AEA800BC4A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */; };
 		5B8C97121DB9AF9900BC4A8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8C97111DB9AF9900BC4A8A /* MapKit.framework */; };
 		E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C61DCAAA5000271614 /* FavoritosViewController.m */; };
 		E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */; };
-		E3C6BED41DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */; };
+		E3DB56881DD4069B007CCBED /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DB56861DD4069B007CCBED /* Model.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		5B8C96FC1DB9AEA800BC4A8A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		5B8C96FD1DB9AEA800BC4A8A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		5B8C97001DB9AEA800BC4A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		5B8C97031DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Projeto_IOS.xcdatamodel; sourceTree = "<group>"; };
 		5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B8C97081DB9AEA800BC4A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B8C970A1DB9AEA800BC4A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,8 +47,7 @@
 		E3B202C61DCAAA5000271614 /* FavoritosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosViewController.m; sourceTree = "<group>"; };
 		E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewCell.h; sourceTree = "<group>"; };
 		E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosTableViewCell.m; sourceTree = "<group>"; };
-		E3C6BED21DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabEstabelecimento+CoreDataProperties.h"; sourceTree = "<group>"; };
-		E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TabEstabelecimento+CoreDataProperties.m"; sourceTree = "<group>"; };
+		E3DB56871DD4069B007CCBED /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +76,7 @@
 			children = (
 				5B8C96FF1DB9AEA800BC4A8A /* Main.storyboard */,
 				5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */,
+				E3DB56861DD4069B007CCBED /* Model.xcdatamodeld */,
 			);
 			name = storyboad;
 			sourceTree = "<group>";
@@ -134,7 +132,6 @@
 				5B0AA71D1DC671870057AF29 /* storyboad */,
 				5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */,
 				5B8C970A1DB9AEA800BC4A8A /* Info.plist */,
-				5B8C97021DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld */,
 				5B8C96F61DB9AEA700BC4A8A /* Supporting Files */,
 			);
 			path = Projeto_IOS;
@@ -159,8 +156,6 @@
 		E30F85E31DCAA20D00F4CC55 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
-				E3C6BED21DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.h */,
-				E3C6BED31DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m */,
 				E3B202C51DCAAA5000271614 /* FavoritosViewController.h */,
 				E3B202C61DCAAA5000271614 /* FavoritosViewController.m */,
 				E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */,
@@ -201,6 +196,7 @@
 					5B8C96F21DB9AEA700BC4A8A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = AEYRW5LL6B;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
@@ -248,13 +244,12 @@
 			files = (
 				E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */,
 				5B8C96FE1DB9AEA800BC4A8A /* ViewController.m in Sources */,
-				5B8C97041DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld in Sources */,
 				5B8C96FB1DB9AEA800BC4A8A /* AppDelegate.m in Sources */,
 				5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */,
 				E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */,
 				5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */,
-				E3C6BED41DCC1B6200DCB357 /* TabEstabelecimento+CoreDataProperties.m in Sources */,
 				5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */,
+				E3DB56881DD4069B007CCBED /* Model.xcdatamodeld in Sources */,
 				5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */,
 				5B0AA7151DC630990057AF29 /* Connection.m in Sources */,
 			);
@@ -376,11 +371,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AEYRW5LL6B;
 				INFOPLIST_FILE = Projeto_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Projeto-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projeto_IOS/Projeto_IOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -388,11 +387,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = AEYRW5LL6B;
 				INFOPLIST_FILE = Projeto_IOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "iesb.Projeto-IOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Projeto_IOS/Projeto_IOS-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -420,13 +422,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		5B8C97021DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodeld */ = {
+		E3DB56861DD4069B007CCBED /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				5B8C97031DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodel */,
+				E3DB56871DD4069B007CCBED /* Model.xcdatamodel */,
 			);
-			currentVersion = 5B8C97031DB9AEA800BC4A8A /* Projeto_IOS.xcdatamodel */;
-			path = Projeto_IOS.xcdatamodeld;
+			currentVersion = E3DB56871DD4069B007CCBED /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
