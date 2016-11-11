@@ -18,6 +18,7 @@
 		5B8C97061DB9AEA800BC4A8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97051DB9AEA800BC4A8A /* Assets.xcassets */; };
 		5B8C97091DB9AEA800BC4A8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8C97071DB9AEA800BC4A8A /* LaunchScreen.storyboard */; };
 		5B8C97121DB9AF9900BC4A8A /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8C97111DB9AF9900BC4A8A /* MapKit.framework */; };
+		E31199201DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = E311991D1DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.m */; };
 		E3B202C71DCAAA5000271614 /* FavoritosViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C61DCAAA5000271614 /* FavoritosViewController.m */; };
 		E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B202C91DCAD3E800271614 /* FavoritosTableViewCell.m */; };
 		E3DB56881DD4069B007CCBED /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E3DB56861DD4069B007CCBED /* Model.xcdatamodeld */; };
@@ -43,6 +44,9 @@
 		5B8C97081DB9AEA800BC4A8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B8C970A1DB9AEA800BC4A8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B8C97111DB9AF9900BC4A8A /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		E31199191DD4258700F056D5 /* TabEstabelecimento+CoreDataClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabEstabelecimento+CoreDataClass.h"; sourceTree = "<group>"; };
+		E311991C1DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "TabEstabelecimento+CoreDataProperties.h"; sourceTree = "<group>"; };
+		E311991D1DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TabEstabelecimento+CoreDataProperties.m"; sourceTree = "<group>"; };
 		E3B202C51DCAAA5000271614 /* FavoritosViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosViewController.h; sourceTree = "<group>"; };
 		E3B202C61DCAAA5000271614 /* FavoritosViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FavoritosViewController.m; sourceTree = "<group>"; };
 		E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FavoritosTableViewCell.h; sourceTree = "<group>"; };
@@ -156,6 +160,9 @@
 		E30F85E31DCAA20D00F4CC55 /* coredata */ = {
 			isa = PBXGroup;
 			children = (
+				E31199191DD4258700F056D5 /* TabEstabelecimento+CoreDataClass.h */,
+				E311991C1DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.h */,
+				E311991D1DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.m */,
 				E3B202C51DCAAA5000271614 /* FavoritosViewController.h */,
 				E3B202C61DCAAA5000271614 /* FavoritosViewController.m */,
 				E3B202C81DCAD3E800271614 /* FavoritosTableViewCell.h */,
@@ -248,6 +255,7 @@
 				5B0AA71B1DC671270057AF29 /* EstabelecimentoTableViewCell.m in Sources */,
 				E3B202CA1DCAD3E800271614 /* FavoritosTableViewCell.m in Sources */,
 				5B8C96F81DB9AEA800BC4A8A /* main.m in Sources */,
+				E31199201DD4258700F056D5 /* TabEstabelecimento+CoreDataProperties.m in Sources */,
 				5B0AA7221DC67B2E0057AF29 /* EstabelecimentoViewController.m in Sources */,
 				E3DB56881DD4069B007CCBED /* Model.xcdatamodeld in Sources */,
 				5B0AA7181DC653460057AF29 /* Estabelecimento.m in Sources */,

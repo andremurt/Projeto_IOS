@@ -8,6 +8,7 @@
 
 #import "FavoritosViewController.h"
 #import "FavoritosTableViewCell.h"
+#import "TabEstabelecimento+CoreDataClass.h"
 
 @interface FavoritosViewController ()
 

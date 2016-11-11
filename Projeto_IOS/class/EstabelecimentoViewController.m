@@ -43,6 +43,7 @@
     self.imgEstabelecimento.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -61,7 +62,7 @@
 */
 
 - (IBAction)switchFavorito:(UISwitch *)sender {
-    
+        
     
     if (sender.isOn){
         //inserir
@@ -69,13 +70,7 @@
         
         NSManagedObject *nsmanaged = [NSEntityDescription insertNewObjectForEntityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         
-        
-        //[NSString stringWithFormat:@"%d",self.estabelecimento.id];
-        
-        
-      //  [nsmanaged setValue: [NSString stringWithFormat:@"%d",self.estabelecimento.id_estab] forKey:@"id"];
-        
-        
+        [nsmanaged setValue:self.estabelecimento.id_estab forKey:@"id"];
         [nsmanaged setValue:self.estabelecimento.icone forKey:@"icone"];
         [nsmanaged setValue:self.estabelecimento.culinaria forKey:@"culinaria"];
         [nsmanaged setValue:self.estabelecimento.email forKey:@"email"];
@@ -88,13 +83,29 @@
         [nsmanaged setValue:self.estabelecimento.nome_estab forKey:@"nome_estab"];
         [nsmanaged setValue:self.estabelecimento.telefone forKey:@"telefone"];
         [nsmanaged setValue:self.estabelecimento.tipos_pagamento forKey:@"tipos_pagamento"];
+        
+        
 
 
      }
     else{
-        
         //deletar
-   //     NSFetchRequest *requeste = [[NSFetchRequest alloc] initWithEntityName:@"id_estab"];
+        
+        NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+        NSString *id_pesq = self.estabelecimento.id_estab;
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"TabEstabelecimento"  inManagedObjectContext:context];
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id like %@", id_pesq];
+        [fetchRequest setEntity:entity];
+        
+        NSError *error;
+        NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
+        for (NSManagedObject *managedObject in items)
+        {
+            [context deleteObject:managedObject];
+        }
+        
         
     }
     
