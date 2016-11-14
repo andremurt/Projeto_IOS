@@ -9,6 +9,7 @@
 #import "FavoritosViewController.h"
 #import "FavoritosTableViewCell.h"
 #import "TabEstabelecimento+CoreDataClass.h"
+#import "AppDelegate.h"
 
 @interface FavoritosViewController ()
 
@@ -47,6 +48,38 @@
     cell.textLabel.text = currentList.title;
     
     return cell;
+}
+
+#pragma mark - Fetched results controller
+
+- (NSFetchedResultsController *)fetchedResultsController{
+    
+     NSManagedObjectContext *managedObjectContext = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"TabEstabelecimento" inManagedObjectContext:managedObjectContext];
+    [fetchRequest setEntity:entity];
+    
+    NSError *error = nil;
+    NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    if (error) {
+        NSLog(@"Unable to execute fetch request.");
+        NSLog(@"%@, %@", error, error.localizedDescription);
+    }
+        
+    return result;
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if([[segue identifier] isEqualToString:@"segueEstabelecimento"]) {
+        
+        NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
+        Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
+        EstabelecimentoViewController* dest = [segue destinationViewController];
+        [dest setEstabelecimento:e];
+    }
 }
 
 @end
