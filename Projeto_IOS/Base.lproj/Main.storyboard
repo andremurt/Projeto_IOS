@@ -274,7 +274,7 @@
                                 <rect key="frame" x="16" y="72" width="343" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="103" id="kTH-va-CF1" customClass="EstabelecimentoTableViewCell">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" rowHeight="103" id="kTH-va-CF1" customClass="FavoritosTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="343" height="103"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kTH-va-CF1" id="ewn-xA-u1i">
@@ -311,12 +311,17 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="imgIcone" destination="wWB-Gp-97J" id="kT5-1d-gqR"/>
-                                            <outlet property="labelNomeEstabelecimento" destination="I3x-jS-n8I" id="Xf6-KP-uyx"/>
+                                            <outlet property="imgIconeFavorito" destination="wWB-Gp-97J" id="YmL-cH-9GN"/>
+                                            <outlet property="labelCulinariaFavorito" destination="NNi-0A-aoa" id="emo-mJ-gIR"/>
+                                            <outlet property="labelNomeEstabelecimentoFavorito" destination="I3x-jS-n8I" id="rP0-KD-ga9"/>
                                             <segue destination="uAC-ea-oBu" kind="show" id="qYc-LF-xCQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="HrY-JZ-rV3" id="TSX-cv-aoU"/>
+                                    <outlet property="delegate" destination="HrY-JZ-rV3" id="5yH-TE-aHs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -327,6 +332,9 @@
                             <constraint firstItem="gE9-tj-vpn" firstAttribute="top" secondItem="hyh-8v-9Rk" secondAttribute="bottom" constant="8" id="x9w-xk-ihK"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="hyh-8v-9Rk" id="eLY-e3-Ydx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="041-5a-v6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

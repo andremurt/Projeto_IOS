@@ -84,7 +84,8 @@
         [nsmanaged setValue:self.estabelecimento.telefone forKey:@"telefone"];
         [nsmanaged setValue:self.estabelecimento.tipos_pagamento forKey:@"tipos_pagamento"];
         
-        
+        NSError *error;
+        [context save:&error];
 
 
      }

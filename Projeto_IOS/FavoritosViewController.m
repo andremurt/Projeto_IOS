@@ -13,17 +13,17 @@
 
 @interface FavoritosViewController ()
 
-@property (nonatomic, strong) NSArray *FavoritosList;
+@property (nonatomic, strong) NSArray<Estabelecimento *> *FavoritosList;
 
 @end
 
 @implementation FavoritosViewController
 
-@synthesize FavoritosList = _FavoritosList;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self loadData];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -42,19 +42,22 @@
 
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    static NSString *CellIdentifier = @"ListCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    FavoritosViewController *currentList = [self.FavoritosList objectAtIndex:self.tableView.indexPathForSelectedRow.row];
-    cell.textLabel.text = currentList.title;
+    static NSString *CellIdentifier = @"cell";
+    FavoritosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    Estabelecimento *estab = [self.FavoritosList objectAtIndex:indexPath.row];
+    
+    cell.labelNomeEstabelecimentoFavorito.text = estab.nome_estab;
+    cell.labelCulinariaFavorito.text = estab.culinaria;
+    
     
     return cell;
 }
 
 #pragma mark - Fetched results controller
 
-- (NSFetchedResultsController *)fetchedResultsController{
+- (void) loadData {
     
-     NSManagedObjectContext *managedObjectContext = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+    NSManagedObjectContext *managedObjectContext = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
 
     NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
     
@@ -62,14 +65,8 @@
     [fetchRequest setEntity:entity];
     
     NSError *error = nil;
-    NSArray *result = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
-    
-    if (error) {
-        NSLog(@"Unable to execute fetch request.");
-        NSLog(@"%@, %@", error, error.localizedDescription);
-    }
-        
-    return result;
+    _FavoritosList = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    [self.tableView reloadData];
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
