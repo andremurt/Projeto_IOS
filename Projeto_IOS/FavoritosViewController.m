@@ -48,6 +48,10 @@
     
     cell.labelNomeEstabelecimentoFavorito.text = estab.nome_estab;
     cell.labelCulinariaFavorito.text = estab.culinaria;
+    UIImage * image  = estab.icone;
+    
+    [cell.imgIconeFavorito setImage:image];
+        
     
     
     return cell;
