@@ -11,6 +11,7 @@
 #import "TabEstabelecimento+CoreDataClass.h"
 #import "AppDelegate.h"
 
+
 @interface FavoritosViewController ()
 
 @property (nonatomic, strong) NSArray<Estabelecimento *> *FavoritosList;
@@ -40,6 +41,7 @@
     return self.FavoritosList.count;
 }
 
+
 - (UITableViewCell *) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     static NSString *CellIdentifier = @"cell";
@@ -48,12 +50,12 @@
     
     cell.labelNomeEstabelecimentoFavorito.text = estab.nome_estab;
     cell.labelCulinariaFavorito.text = estab.culinaria;
-    UIImage * image  = estab.icone;
     
-    [cell.imgIconeFavorito setImage:image];
-        
-    
-    
+    NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: estab.icone]];
+    {
+        [cell.imgIconeFavorito setImage:[UIImage imageWithData: imageData]];
+    };
+
     return cell;
 }
 
@@ -77,7 +79,7 @@
     if([[segue identifier] isEqualToString:@"segueEstabelecimento"]) {
         
         NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
-        Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
+        Estabelecimento* e = [[self FavoritosList] objectAtIndex:index.row];
         EstabelecimentoViewController* dest = [segue destinationViewController];
         [dest setEstabelecimento:e];
     }

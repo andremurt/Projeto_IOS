@@ -92,23 +92,24 @@
     else{
         //deletar
         
-        NSManagedObjectContext *context = ((AppDelegate *)[UIApplication sharedApplication].delegate).managedObjectContext;
+        
         NSString *id_pesq = self.estabelecimento.id_estab;
         
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"TabEstabelecimento"  inManagedObjectContext:context];
-        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"id like %@", id_pesq];
-        [fetchRequest setEntity:entity];
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        NSManagedObjectContext *context = [appDelegate managedObjectContext];
         
+        NSEntityDescription *Entity=[NSEntityDescription entityForName:@"TabEstabelecimento" inManagedObjectContext:context];
+        NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
+        [fetch setEntity:Entity];
+        NSPredicate *p=[NSPredicate predicateWithFormat:@"id == %@", id_pesq];
+        [fetch setPredicate:p];
+        NSError *fetchError;
         NSError *error;
-        NSArray *items = [context executeFetchRequest:fetchRequest error:&error];
-        for (NSManagedObject *managedObject in items)
-        {
-            [context deleteObject:managedObject];
+        NSArray *fetchedEstabelecimentos=[context executeFetchRequest:fetch error:&fetchError];
+        for (NSManagedObject *estabelecimento in fetchedEstabelecimentos) {
+            [context deleteObject:estabelecimento];
         }
-        
-        
+        [context save:&error];
     }
-    
 }
 @end

@@ -282,32 +282,34 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWB-Gp-97J">
-                                                    <rect key="frame" x="8" y="19" width="73" height="65"/>
+                                                    <rect key="frame" x="8" y="8" width="107" height="87"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="73" id="sQL-33-9VM"/>
+                                                        <constraint firstAttribute="width" secondItem="wWB-Gp-97J" secondAttribute="height" multiplier="107:95" constant="9.0105263157894768" id="9tP-SL-fpf"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estabelecimento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3x-jS-n8I">
-                                                    <rect key="frame" x="89" y="19" width="213" height="21"/>
+                                                    <rect key="frame" x="123" y="8" width="172" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Culinaria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNi-0A-aoa">
-                                                    <rect key="frame" x="89" y="48" width="67" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culinaria" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NNi-0A-aoa">
+                                                    <rect key="frame" x="123" y="37" width="164" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="wWB-Gp-97J" firstAttribute="top" secondItem="I3x-jS-n8I" secondAttribute="top" id="QGY-cb-eev"/>
-                                                <constraint firstItem="I3x-jS-n8I" firstAttribute="trailing" secondItem="ewn-xA-u1i" secondAttribute="trailingMargin" id="aA4-5d-5wv"/>
-                                                <constraint firstItem="wWB-Gp-97J" firstAttribute="centerY" secondItem="ewn-xA-u1i" secondAttribute="centerY" id="cpu-Cn-qrC"/>
-                                                <constraint firstItem="I3x-jS-n8I" firstAttribute="leading" secondItem="wWB-Gp-97J" secondAttribute="trailing" constant="8" symbolic="YES" id="h7c-NY-s57"/>
-                                                <constraint firstItem="wWB-Gp-97J" firstAttribute="top" secondItem="ewn-xA-u1i" secondAttribute="topMargin" constant="11" id="jAe-Wb-Nbb"/>
-                                                <constraint firstItem="wWB-Gp-97J" firstAttribute="leading" secondItem="ewn-xA-u1i" secondAttribute="leadingMargin" id="jaA-JP-6Bf"/>
+                                                <constraint firstItem="NNi-0A-aoa" firstAttribute="top" secondItem="I3x-jS-n8I" secondAttribute="bottom" constant="8" id="0RR-B9-QTT"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NNi-0A-aoa" secondAttribute="trailing" constant="15" id="9TY-Jd-Cje"/>
+                                                <constraint firstItem="I3x-jS-n8I" firstAttribute="top" secondItem="wWB-Gp-97J" secondAttribute="top" id="AXJ-I3-sd9"/>
+                                                <constraint firstItem="I3x-jS-n8I" firstAttribute="leading" secondItem="wWB-Gp-97J" secondAttribute="trailing" constant="8" id="Byl-kw-0vE"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="wWB-Gp-97J" secondAttribute="bottom" id="FsZ-BB-hSG"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="I3x-jS-n8I" secondAttribute="trailing" constant="7" id="dEb-h8-XHJ"/>
+                                                <constraint firstItem="wWB-Gp-97J" firstAttribute="top" secondItem="ewn-xA-u1i" secondAttribute="top" constant="8" id="m0J-08-rNI"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="wWB-Gp-97J" secondAttribute="leading" id="n3B-0h-qxO"/>
+                                                <constraint firstItem="NNi-0A-aoa" firstAttribute="leading" secondItem="wWB-Gp-97J" secondAttribute="trailing" constant="8" id="q6R-da-qmV"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
