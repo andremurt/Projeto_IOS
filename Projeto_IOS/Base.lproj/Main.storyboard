@@ -223,6 +223,7 @@
                         <outlet property="lblNome" destination="8b8-xm-8BQ" id="ZTK-Gq-cvZ"/>
                         <outlet property="lblhorario" destination="epL-uy-6VO" id="juz-GE-aNs"/>
                         <outlet property="mapView" destination="Dr9-73-Egs" id="w0B-gB-cz4"/>
+                        <outlet property="myswitch" destination="7xy-2w-N0N" id="6G3-PB-i2r"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Adq-YQ-Gt5" userLabel="First Responder" sceneMemberID="firstResponder"/>

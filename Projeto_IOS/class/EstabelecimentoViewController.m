@@ -43,7 +43,23 @@
     self.imgEstabelecimento.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
     
+    NSString *id_pesq = self.estabelecimento.id_estab;
     
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    
+    NSEntityDescription *Entity=[NSEntityDescription entityForName:@"TabEstabelecimento" inManagedObjectContext:context];
+    NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
+    [fetch setEntity:Entity];
+    NSPredicate *p=[NSPredicate predicateWithFormat:@"id == %@", id_pesq];
+    [fetch setPredicate:p];
+    NSError *fetchError;
+    NSArray *results = [context executeFetchRequest:fetch error:&fetchError];
+    
+    if (results.firstObject > 0){
+        [_myswitch setOn:YES];
+
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -62,7 +78,7 @@
 */
 
 - (IBAction)switchFavorito:(UISwitch *)sender {
-        
+    
     
     if (sender.isOn){
         //inserir

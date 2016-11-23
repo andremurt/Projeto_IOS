@@ -21,5 +21,7 @@
 
 - (IBAction)switchFavorito:(id)sender;
 
+@property (weak, nonatomic) IBOutlet UISwitch *myswitch;
+
 
 @end
