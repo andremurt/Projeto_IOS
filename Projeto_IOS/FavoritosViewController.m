@@ -11,7 +11,6 @@
 #import "TabEstabelecimento+CoreDataClass.h"
 #import "AppDelegate.h"
 
-
 @interface FavoritosViewController ()
 
 @property (nonatomic, strong) NSArray<Estabelecimento *> *FavoritosList;
@@ -25,6 +24,8 @@
     [super viewDidLoad];
     
     [self loadData];
+    
+   
 }
 
 - (void)didReceiveMemoryWarning {
@@ -76,10 +77,10 @@
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if([[segue identifier] isEqualToString:@"segueEstabelecimento"]) {
+    if([[segue identifier] isEqualToString:@"segueEstabelecimentoFav"]) {
         
         NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
-        Estabelecimento* e = [[self FavoritosList] objectAtIndex:index.row];
+        Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
         EstabelecimentoViewController* dest = [segue destinationViewController];
         [dest setEstabelecimento:e];
     }

@@ -317,7 +317,7 @@
                                             <outlet property="imgIconeFavorito" destination="wWB-Gp-97J" id="YmL-cH-9GN"/>
                                             <outlet property="labelCulinariaFavorito" destination="NNi-0A-aoa" id="emo-mJ-gIR"/>
                                             <outlet property="labelNomeEstabelecimentoFavorito" destination="I3x-jS-n8I" id="rP0-KD-ga9"/>
-                                            <segue destination="uAC-ea-oBu" kind="show" id="qYc-LF-xCQ"/>
+                                            <segue destination="uAC-ea-oBu" kind="show" identifier="segueEstabelecimentoFav" id="qYc-LF-xCQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
