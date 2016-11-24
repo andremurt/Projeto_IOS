@@ -72,8 +72,8 @@
     if([[segue identifier] isEqualToString:@"segueEstabelecimentoFav"]) {
         
         NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
-        //Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
-        Estabelecimento *estab = [self.FavoritosList objectAtIndex:index.row];
+        Estabelecimento* estab = [[self estabelecimentos] objectAtIndex:index.row];
+        //Estabelecimento *estab = [self.FavoritosList objectAtIndex:index.row];
         EstabelecimentoViewController* dest = [segue destinationViewController];
         [dest setEstabelecimento:estab];
     }
