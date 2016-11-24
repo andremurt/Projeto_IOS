@@ -43,7 +43,10 @@
     self.imgEstabelecimento.image = [UIImage imageWithData:[NSData dataWithContentsOfURL:
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
     
-    NSString *id_pesq = self.estabelecimento.id_estab;
+    NSString *id_pesq;
+    if (self.estabelecimento.id_estab) {
+        id_pesq = self.estabelecimento.id_estab;
+    }
     
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     NSManagedObjectContext *context = [appDelegate managedObjectContext];

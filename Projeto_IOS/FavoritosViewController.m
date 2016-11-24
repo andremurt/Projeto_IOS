@@ -22,20 +22,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
     [self loadData];
-    
-   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (NSInteger) numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -80,9 +72,10 @@
     if([[segue identifier] isEqualToString:@"segueEstabelecimentoFav"]) {
         
         NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
-        Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
+        //Estabelecimento* e = [[self estabelecimentos] objectAtIndex:index.row];
+        Estabelecimento *estab = [self.FavoritosList objectAtIndex:index.row];
         EstabelecimentoViewController* dest = [segue destinationViewController];
-        [dest setEstabelecimento:e];
+        [dest setEstabelecimento:estab];
     }
 }
 
