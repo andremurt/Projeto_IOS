@@ -27,7 +27,12 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
+-(void)viewWillAppear:(BOOL)animated {
+    NSIndexPath* indexPath = [self.tableView indexPathForSelectedRow];
+    if (indexPath) {
+        [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
+    }
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [[self estabelecimentos] count];

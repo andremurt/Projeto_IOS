@@ -8,9 +8,9 @@
         <attribute name="foto" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="horario_func" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="icone" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id_estab" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="latitude" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="longitute" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="nome_estab" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="telefone" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="tipos_pagamento" optional="YES" attributeType="String" syncable="YES"/>

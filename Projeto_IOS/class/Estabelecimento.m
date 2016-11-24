@@ -30,7 +30,7 @@
     self.endereco           = [estabelecimento objectForKey:@"endereco"];
     self.tipos_pagamento    = [estabelecimento objectForKey:@"tipos_pagamento"];
     self.latitude           = [estabelecimento objectForKey:@"latitude"];
-    self.longitute          = [estabelecimento objectForKey:@"longitute"];
+    self.longitude          = [estabelecimento objectForKey:@"longitude"];
     self.foto               = [estabelecimento objectForKey:@"foto"];
     self.icone              = [estabelecimento objectForKey:@"icone"];
     self.culinaria          = [estabelecimento objectForKey:@"culinaria"];

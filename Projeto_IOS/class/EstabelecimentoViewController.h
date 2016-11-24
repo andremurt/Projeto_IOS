@@ -18,6 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *lblEndereco;
 @property (weak, nonatomic) IBOutlet UILabel *lblhorario;
 @property (strong, nonatomic)Estabelecimento* estabelecimento;
+@property (nonatomic)NSString* estabelecimento_id;
+
 
 - (IBAction)switchFavorito:(id)sender;
 

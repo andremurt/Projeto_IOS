@@ -13,7 +13,8 @@
 
 @interface FavoritosViewController ()
 
-@property (nonatomic, strong) NSArray<Estabelecimento *> *FavoritosList;
+//@property (nonatomic, strong) NSArray<Estabelecimento *> *FavoritosList;
+@property(nonatomic)NSMutableArray *estabelecimentos;
 
 @end
 
@@ -22,6 +23,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+}
+
+
+-(void)viewWillAppear:(BOOL)animated {
     [self loadData];
 }
 
@@ -31,7 +36,7 @@
 }
 
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.FavoritosList.count;
+    return [self estabelecimentos].count;
 }
 
 
@@ -39,10 +44,11 @@
     
     static NSString *CellIdentifier = @"cell";
     FavoritosTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    Estabelecimento *estab = [self.FavoritosList objectAtIndex:indexPath.row];
-    
+    Estabelecimento *estab = [self.estabelecimentos objectAtIndex:indexPath.row];
+    //NSLog(@"teste %@", [estab valueForKey:@"id_estab"]);
     cell.labelNomeEstabelecimentoFavorito.text = estab.nome_estab;
     cell.labelCulinariaFavorito.text = estab.culinaria;
+    cell.tag = [[[self.estabelecimentos objectAtIndex:indexPath.row] valueForKey:@"id_estab"] integerValue];
     
     NSData * imageData = [[NSData alloc] initWithContentsOfURL: [NSURL URLWithString: estab.icone]];
     {
@@ -64,7 +70,13 @@
     [fetchRequest setEntity:entity];
     
     NSError *error = nil;
-    _FavoritosList = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    
+    NSArray* arr = [managedObjectContext executeFetchRequest:fetchRequest error:&error];
+    self.estabelecimentos = [NSMutableArray new];
+    for (id estabelecimento in arr) {
+        [self.estabelecimentos addObject:estabelecimento];
+        NSLog(@"%@", estabelecimento);
+    }
     [self.tableView reloadData];
 }
 
@@ -72,9 +84,11 @@
     if([[segue identifier] isEqualToString:@"segueEstabelecimentoFav"]) {
         
         NSIndexPath* index = [[self tableView] indexPathForSelectedRow];
-        Estabelecimento* estab = [[self estabelecimentos] objectAtIndex:index.row];
+        Estabelecimento* estab = self.estabelecimentos[index.row] ;
         //Estabelecimento *estab = [self.FavoritosList objectAtIndex:index.row];
         EstabelecimentoViewController* dest = [segue destinationViewController];
+        dest.estabelecimento = [Estabelecimento new];
+        dest.estabelecimento_id = [NSString stringWithFormat:@"%d", [(UIView *)sender tag]];
         [dest setEstabelecimento:estab];
     }
 }

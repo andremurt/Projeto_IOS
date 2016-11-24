@@ -22,7 +22,7 @@
     // Do any additional setup after loading the view.
     
     double lat = [[[self estabelecimento] latitude]doubleValue];
-    double lon = [[[self estabelecimento] longitute]doubleValue];
+    double lon = [[[self estabelecimento] longitude]doubleValue];
     
     CLLocationCoordinate2D coord = CLLocationCoordinate2DMake(lat, lon);
     
@@ -44,15 +44,15 @@
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
     
     NSString *id_pesq;
-    if (self.estabelecimento.id_estab) {
-        id_pesq = self.estabelecimento.id_estab;
+    if (self.estabelecimento_id) {
+        id_pesq = self.estabelecimento_id;
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *context = [appDelegate managedObjectContext];
         
         NSEntityDescription *Entity=[NSEntityDescription entityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
         [fetch setEntity:Entity];
-        NSPredicate *p=[NSPredicate predicateWithFormat:@"id == %@", id_pesq];
+        NSPredicate *p=[NSPredicate predicateWithFormat:@"id_estab == %@", id_pesq];
         [fetch setPredicate:p];
         NSError *fetchError;
         NSArray *results = [context executeFetchRequest:fetch error:&fetchError];
@@ -89,18 +89,18 @@
         
         NSManagedObject *nsmanaged = [NSEntityDescription insertNewObjectForEntityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         
-        [nsmanaged setValue:self.estabelecimento.id_estab forKey:@"id"];
-        [nsmanaged setValue:self.estabelecimento.icone forKey:@"icone"];
-        [nsmanaged setValue:self.estabelecimento.culinaria forKey:@"culinaria"];
-        [nsmanaged setValue:self.estabelecimento.email forKey:@"email"];
-        [nsmanaged setValue:self.estabelecimento.endereco forKey:@"endereco"];
-        [nsmanaged setValue:self.estabelecimento.facebook forKey:@"facebook"];
-        [nsmanaged setValue:self.estabelecimento.foto  forKey:@"foto"];
-        [nsmanaged setValue:self.estabelecimento.horario_func forKey:@"horario_func"];
-        [nsmanaged setValue:self.estabelecimento.latitude forKey:@"latitude"];
-        [nsmanaged setValue:self.estabelecimento.longitute forKey:@"longitute"];
-        [nsmanaged setValue:self.estabelecimento.nome_estab forKey:@"nome_estab"];
-        [nsmanaged setValue:self.estabelecimento.telefone forKey:@"telefone"];
+        [nsmanaged setValue:self.estabelecimento.id_estab       forKey:@"id_estab"];
+        [nsmanaged setValue:self.estabelecimento.icone          forKey:@"icone"];
+        [nsmanaged setValue:self.estabelecimento.culinaria      forKey:@"culinaria"];
+        [nsmanaged setValue:self.estabelecimento.email          forKey:@"email"];
+        [nsmanaged setValue:self.estabelecimento.endereco       forKey:@"endereco"];
+        [nsmanaged setValue:self.estabelecimento.facebook       forKey:@"facebook"];
+        [nsmanaged setValue:self.estabelecimento.foto           forKey:@"foto"];
+        [nsmanaged setValue:self.estabelecimento.horario_func   forKey:@"horario_func"];
+        [nsmanaged setValue:self.estabelecimento.latitude       forKey:@"latitude"];
+        [nsmanaged setValue:self.estabelecimento.longitude      forKey:@"longitude"];
+        [nsmanaged setValue:self.estabelecimento.nome_estab     forKey:@"nome_estab"];
+        [nsmanaged setValue:self.estabelecimento.telefone       forKey:@"telefone"];
         [nsmanaged setValue:self.estabelecimento.tipos_pagamento forKey:@"tipos_pagamento"];
         
         NSError *error;
@@ -112,7 +112,7 @@
         //deletar
         
         
-        NSString *id_pesq = self.estabelecimento.id_estab;
+        NSString *id_pesq = self.estabelecimento_id;
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *context = [appDelegate managedObjectContext];
@@ -120,7 +120,7 @@
         NSEntityDescription *Entity=[NSEntityDescription entityForName:@"TabEstabelecimento" inManagedObjectContext:context];
         NSFetchRequest *fetch=[[NSFetchRequest alloc] init];
         [fetch setEntity:Entity];
-        NSPredicate *p=[NSPredicate predicateWithFormat:@"id == %@", id_pesq];
+        NSPredicate *p=[NSPredicate predicateWithFormat:@"id_estab == %@", id_pesq];
         [fetch setPredicate:p];
         NSError *fetchError;
         NSError *error;

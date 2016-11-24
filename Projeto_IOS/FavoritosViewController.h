@@ -11,7 +11,6 @@
 
 @interface FavoritosViewController : UIViewController<UITableViewDataSource>
 
-@property(nonatomic)NSArray<Estabelecimento *> *estabelecimentos;
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
