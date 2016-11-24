@@ -44,8 +44,12 @@
                                                             [NSURL URLWithString:self.estabelecimento.foto]]];
     
     NSString *id_pesq;
+    
     if (self.estabelecimento_id) {
         id_pesq = self.estabelecimento_id;
+    }else{
+        id_pesq = self.estabelecimento.id_estab;
+    }
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *context = [appDelegate managedObjectContext];
         
@@ -59,8 +63,6 @@
         
         if (results.firstObject > 0){
             [_myswitch setOn:YES];
-            
-        }
     }
     
 }
@@ -111,8 +113,12 @@
     else{
         //deletar
         
-        
-        NSString *id_pesq = self.estabelecimento_id;
+        NSString *id_pesq;
+        if (self.estabelecimento_id) {
+            id_pesq = self.estabelecimento_id;
+        }else{
+            id_pesq = self.estabelecimento.id_estab;
+        }
         
         AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
         NSManagedObjectContext *context = [appDelegate managedObjectContext];
